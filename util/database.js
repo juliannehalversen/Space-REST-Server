@@ -1,4 +1,4 @@
-import mongodb from 'mongodb'
+/* import mongodb from 'mongodb'
 const MongoClient = mongodb.MongoClient
 
 let _db
@@ -19,4 +19,4 @@ export const getDb = () => {
         return _db
     }
     throw 'No database found!'
-}
+} */
