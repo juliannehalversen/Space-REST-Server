@@ -67,12 +67,13 @@ export const getEditProduct = (req, res, next) => {
 
 // Delete Product
 export const postDeleteProduct = ( req, res, next) => {
-    const prodId = req.body.productId
+    const prodId = req.body.productId;
     Product.findByIdAndRemove(prodId)
     .then(() => {
+      console.log(prodId);
         console.log('Deleted the product')
-        res.send('Deleted Product! Check your DB')
-        res.redirect('/admin/getAllProducts')
+        res.send('Deleted Product! Get all to see!')
+        // res.redirect('/admin/getAllProducts')
     })
     .catch(err => console.log(err))
 } 
