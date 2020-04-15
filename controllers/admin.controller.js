@@ -2,14 +2,17 @@ import { Product } from '../models/product'
 
 // Create New Product
 export const postAddProduct = (req, res, next) => {
-  console.log('req is:' + req.body.name);
+  console.log('req is:' + req.body.title);
+  
   const product = new Product({
     title: req.body.title,
     price: req.body.price,
     description: req.body.description,
     imageUrl: req.body.imageUrl,
   })
-  product
+  console.log('PRODUCT IS: ' + product);
+  
+   product
     .save()
     .then(result => {
       console.log('Created Product')
