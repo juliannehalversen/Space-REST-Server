@@ -2,6 +2,7 @@ import { Product } from '../models/product'
 
 // Create New Product
 export const postAddProduct = (req, res, next) => {
+  console.log('req is:' + req.body.name);
   const product = new Product({
     title: req.body.title,
     price: req.body.price,
@@ -30,8 +31,8 @@ export const postAddProduct = (req, res, next) => {
 
 // Get Single Product 
 export const getProductById = (req, res, next) => {
-  const prodId = req.body.productId
-  console.log(prodId)
+  const prodId = req;
+  console.log('PRODUCT ID ' + prodId)
   Product.findById(prodId)
     .then(product => {
       if (!product) {

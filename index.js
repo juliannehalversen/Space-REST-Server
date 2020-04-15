@@ -1,6 +1,7 @@
 import express from 'express'
 import bodyParser from 'body-parser'
 import mongoose from 'mongoose'
+import cors from 'cors'
 
 
 import { adminRouter } from './routes/admin.route'
@@ -14,12 +15,14 @@ app.use(
   }),
 )
 
-app.use((req, res, next) => {
-  res.setHeader('Access-Control-Allow-Origin', '*');
-  res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, PATCH, DELETE');
-  res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Authorization');
-  next();
-});
+// app.use(require("body-parser").json());
+
+
+app.use(cors({
+  orgin: '*',
+}));
+
+app.use(bodyParser.json());
 
 app.use(express.static('public'))
 
