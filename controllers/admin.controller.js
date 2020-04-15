@@ -31,9 +31,9 @@ export const postAddProduct = (req, res, next) => {
 
 // Get Single Product 
 export const getProductById = (req, res, next) => {
-  const prodId = req;
-  console.log('PRODUCT ID ' + prodId)
-  Product.findById(prodId)
+  const prodId = req.params;
+  console.log('PRODUCT ID ' + prodId.id)
+  Product.findById(prodId.id)
     .then(product => {
       if (!product) {
         return res.redirect('/')

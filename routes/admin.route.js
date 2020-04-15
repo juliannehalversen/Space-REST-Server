@@ -6,7 +6,7 @@ import { postAddProduct, getAllProducts, getProductById, getEditProduct, postDel
 
 adminRouter.get('/getAllProducts', getAllProducts)
 
-adminRouter.get('/single-product', getProductById)
+adminRouter.get('/single-product/:id', getProductById)
 
 adminRouter.get('/edit-product', getEditProduct)
 
