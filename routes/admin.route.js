@@ -8,7 +8,7 @@ adminRouter.get('/getAllProducts', getAllProducts)
 
 adminRouter.get('/single-product/:id', getProductById)
 
-adminRouter.get('/edit-product', getEditProduct)
+adminRouter.post('/edit-product/', getEditProduct)
 
 adminRouter.post('/add-product', postAddProduct)
 

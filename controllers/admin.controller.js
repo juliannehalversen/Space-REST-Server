@@ -48,9 +48,11 @@ export const getEditProduct = (req, res, next) => {
   const updatedTitle = req.body.title
   const updatedPrice = req.body.price
   const updatedDesc = req.body.description
-  const updatedImageUrl = req.body.imageUrl
+  const updatedImageUrl = req.body.imageUrl 
+
+  console.log(prodId, updatedTitle, updatedPrice, updatedDesc, updatedImageUrl);
   
-  Product.findById(prodId)
+ Product.findById(prodId)
   .then(product => {
     product.title = updatedTitle
     product.price = updatedPrice
@@ -62,8 +64,8 @@ export const getEditProduct = (req, res, next) => {
       console.log('Updated product')
       res.redirect('/admin/getAllProducts')
     })
-    .catch(err => console.log(err))
-}
+    .catch(err => console.log(err))  
+} 
 
 // Delete Product
 export const postDeleteProduct = ( req, res, next) => {
