@@ -2,14 +2,14 @@ import { Router } from 'express'
 
 export const adminRouter = Router()
 
-import { postAddProduct, getAllProducts, getProductById, getEditProduct, postDeleteProduct } from '../controllers/admin.controller'
+import { postAddGalaxy, getAllGalaxies, getGalaxyById, getEditGalaxy, postDeleteGalaxy } from '../controllers/admin.controller'
 
-adminRouter.get('/getAllProducts', getAllProducts)
+adminRouter.get('/getAllGalaxies', getAllGalaxies)
 
-adminRouter.get('/single-product/:id', getProductById)
+adminRouter.get('/single-galaxy/:id', getGalaxyById)
 
-adminRouter.post('/edit-product/', getEditProduct)
+adminRouter.post('/edit-galaxy', getEditGalaxy)
 
-adminRouter.post('/add-product', postAddProduct)
+adminRouter.post('/add-galaxy', postAddGalaxy)
 
-adminRouter.post('/delete-product', postDeleteProduct)
+adminRouter.post('/delete-galaxy', postDeleteGalaxy)

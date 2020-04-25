@@ -2,23 +2,27 @@ import mongoose from 'mongoose'
 
 const Schema = mongoose.Schema
 
-const productSchema  = new Schema({
-    title: {
+const galaxySchema  = new Schema({
+    category: {
         type: String,
         required: true
     },
-    price: {
+    name: {
+        type: String,
+        required: true
+    },
+    constellation: {
+        type: String,
+        required: true
+    },
+    nameOrigin: {
+        type: String,
+        required: true
+    },
+    distance: {
         type: Number,
-        required: true
-    },
-    description: {
-        type: String,
-        required: true
-    },
-    imageUrl: {
-        type: String,
         required: true
     }
 })
 
-export const Product = mongoose.model('Product', productSchema)
+export const Galaxy = mongoose.model('Galaxy', galaxySchema)
