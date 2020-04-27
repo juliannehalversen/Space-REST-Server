@@ -13,7 +13,7 @@ git clone https://github.com/juliannehalversen/Space-REST-Server.git
 ### 2. Install project dependencies and start server
 
 ```
-cd Space-Frontend
+cd Space-REST-Server
 npm install
 npm start
 ```
