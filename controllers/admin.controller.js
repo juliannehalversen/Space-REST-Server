@@ -81,7 +81,7 @@ export const postDeleteGalaxy = ( req, res, next) => {
     .then(() => {
       console.log(galaxyId);
         console.log('Deleted the galaxy')
-        res.send('Deleted Galaxy! Get all to see!')
+        res.send('Deleted Item! Get all to see!')
         // res.redirect('/admin/getAllProducts')
     })
     .catch(err => console.log(err))

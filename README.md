@@ -1,4 +1,4 @@
-# julianne-halversen-CRUD-Server
+# Space REST API 
 
 ## To start the server, clone this repo and npm install. Start Server on localhost with npm start.
 
