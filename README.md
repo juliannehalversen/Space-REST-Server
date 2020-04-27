@@ -1,20 +1,46 @@
-# Space REST API 
+# Space REST API
 
-## To start the server, clone this repo and npm install. Start Server on localhost with npm start.
+This project was created to be a REST API for my [Space Frontend Repository](https://github.com/juliannehalversen/Space-Frontend). Follow steps 1-3 to start the server for the front end to access. There is also more documentation below to test each endpoint via Postman.
 
-## GET Requests
+## How to use
 
-### ALL PRODUCTS: hit this endpoint on Postman: https://limitless-island-88013.herokuapp.com/admin/getAllProducts 
+### 1. Clone project to desired location
 
-### SINGLE PRODUCT: hit this endpoint on Postman: https://limitless-island-88013.herokuapp.com/admin/single-product. In the body enter 'productId' and then this product id 5e4db053fec85ddb8c463457 under the x-www-form-urlencoded. This can pull any item but I just provided a product key to make it easier.
+```
+git clone https://github.com/juliannehalversen/Space-REST-Server.git
+```
 
-### UPDATE PRODUCT: I used a get request to update products. The endpoint is https://limitless-island-88013.herokuapp.com/admin/edit-product. In the body of the GET request (x-www-urlencoded), enter the productId of the product to edit. Also enter the title, price, description, and imageUrl along with the desired values. 
+### 2. Install project dependencies and start server
 
-## POST Requests
+```
+cd Space-Frontend
+npm install
+npm start
+```
 
-### CREATE PRODUCT: hit this endpoint: https://limitless-island-88013.herokuapp.com/admin/add-product. In the body of the POST request (x-www-urlencoded), enter the title, price, description, and imageUrl. 
+### 3. Open Frontend OR test in Postman
 
-### DELETE PRODUCT: hit this endpoint: https://limitless-island-88013.herokuapp.com/admin/delete-product. Enter the productId and number in the field the same as single product. I have provided the id of an item that can be deleted: 5e534a013e44161db6812d8a.
+#### [Click here for the frontend repository](https://github.com/juliannehalversen/Space-Frontend). 
+
+
+### Testing in Postman
+
+#### GET Requests
+ALL ITEMS: hit this endpoint in Postman: http://localhost:3000/admin/getAllGalaxies
+
+ONE ITEM: hit this endpoint in Postman http://localhost:3000/admin/single-galaxy/5e9e3380474cbc605dd1af8f
+Note: the "5e9e3380474cbc605dd1af8f" is the ID of the item, you can replace it with a different ID, it's just there for testing purposes.
+
+#### POST Requests
+
+CREATE ITEM: hit this endpoint in Postman http://localhost:3000/admin/add-galaxy. In the body of the POST request under x-www-form-urlencode enter desired values for the category, name, constellation, name origin, and distance.
+
+UPDATE ITEM: hit this endpoint in Postman http://localhost:3000/admin/edit-galaxy. Just like creating an item add the values in the body of the POST request. In addition to the above fields, also add the ID of the item you wish to edit.
+
+DELETE ITEM: hit this endpoing in Postman http://localhost:3000/admin/delete-galaxy. Enter the item ID of the item you want to delete in the body of the POST request under the x-www-form-urlencoded option. 
+
+
+
 
 
 
